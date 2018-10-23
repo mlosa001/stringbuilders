@@ -7,6 +7,13 @@ import static org.pursuit.Weather.*;
 // * anything tahts static i want all of them
 
 public class Main {
+    public static final int HOT= 0;
+    public static final int WARM= 1;
+    public static final int COLD= 2;
+    public static final int UNKNOWN= 3;
+
+//constatnst do the same thing as enums
+
 
     public static void main(String[] args) {
 //        System.out.println(reverseMe("hello"));
@@ -41,26 +48,47 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("what choice");
         int input = scanner.nextInt();
-        checkWeather(Weather.values()[input-1]);
+//        checkWeather(Weather.values()[input-1]);
+        checkWeather(input -1 );
 
     }
-        public static void checkWeather(Weather weather) {
-            if(weather != null) {
-                switch(weather){
-                    case SUNNY:
-                        System.out.println(SUNNY.toString());
-                        break;
-                    case RAINY:
-                        System.out.println(RAINY.toString());
-                        break;
-                    case CLOUDY:
-                        System.out.println(CLOUDY.toString());
-                        break;
-                    case UNKNOWN:
-                        System.out.println(UNKNOWN.toString());
-                        break;
-                }
+//        public static void checkWeather(Weather weather) {
+//            if(weather != null) {
+//                switch(weather){
+//                    case SUNNY:
+//                        System.out.println(SUNNY.toString());
+//                        break;
+//                    case RAINY:
+//                        System.out.println(RAINY.toString());
+//                        break;
+//                    case CLOUDY:
+//                        System.out.println(CLOUDY.toString());
+//                        break;
+//                    case UNKNOWN:
+//                        System.out.println(UNKNOWN.toString());
+//                        break;
+//                }
+//            }
+//        }
+
+    public static void checkWeather(int temp) {
+            switch(temp){
+                case HOT:
+                    System.out.println("hot");
+                    break;
+                case WARM:
+                    System.out.println("warmt");
+                    break;
+                case COLD:
+                    System.out.println("cold");
+                    break;
+                case UNKNOWN:
+                    System.out.println("?");
+                    break;
             }
         }
-
     }
+
+
+
+
